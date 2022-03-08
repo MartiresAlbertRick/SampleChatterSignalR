@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-2">
+        <a [routerLink]="['/main/products']" class="btn btn-outline-secondary">
+            Back
+        </a>
+    </div>
+</div>
+<br />
+<div class="row form-group">
+    <div class="col-lg-3">
+        <label>Product Id</label>
+        <input [(ngModel)]="product.productId" type="text" class="form-control" readonly/>
+    </div>
+    <div class="col-lg-3">
+        <label>Product Name</label>
+        <input [(ngModel)]="product.productName" type="text" class="form-control" />
+    </div>
+    <div class="col-lg-3">
+        <label>Product Type</label>
+        <select [(ngModel)]="product.productType" class="form-select" (change)="onTypeChange()">
+            <option *ngFor="let data of enumData" [value]="data.id">{{data.description}}</option>
+        </select>
+    </div>
+    <div class="col-lg-3">
+        <label>Interest Rate</label>
+        <input [disabled]="product.productType==1" [(ngModel)]="product.interestRate" type="text" class="form-control" />
+    </div>
+    <div class="col-lg-3">
+        <label>Establishment Fee</label>
+        <input [(ngModel)]="product.establishmentFee" type="text" class="form-control" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-2">
+        <a (click)="saveData()" class="btn btn-success">
+            Save
+        </a>
+    </div>
+</div>

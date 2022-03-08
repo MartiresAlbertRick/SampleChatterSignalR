@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>SampleChatterEntities</AssemblyName>
+    <RootNamespace>SampleChatter.Entities</RootNamespace>
+    <Company>Sample Chatter</Company>
+    <Description>Sample Chatter Entities</Description>
+    <Copyright>Copyright © Albert Rick Martires 2022</Copyright>
+    <Product>Sample Chatter Signal R</Product>
+    <Authors>Albert Rick Martires</Authors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6"/>
+  </ItemGroup>
+</Project>
